@@ -29,10 +29,10 @@ var text = x > 10 ? "x больше десяти" : x < 10 ? "х меньше 10
 console.log(text);
 
 // такая же инструкция
-if (x < 10){
-    text = "x меньше 10"
-}else if (x > 10){
+if (x > 10){
     text = "x больше 10"
+}else if (x < 10){
+    text = "x меньше 10"
 } else {
     text = "x равно 10"
 }
