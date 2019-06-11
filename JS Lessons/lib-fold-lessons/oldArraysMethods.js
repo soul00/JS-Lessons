@@ -11,7 +11,7 @@ months[4] = "Fabruary";
 // console.log(months);
 // console.log(months.length);
 
-months[20] = "September"; // разреженный массив Sparse array
+months[20] = "September"; // разряженный массив Sparse array
 // console.log(months);
 // console.log(months.length);
 

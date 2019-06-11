@@ -1,0 +1,44 @@
+// все методы тут не изменяют исходный массив
+// кроме callback 
+
+var array = ["Some string","Another string","Banana","Soulless","Apple"]
+
+// array.forEach(function(element,index, array){
+//     console.log(element);
+//     array[index] = element.toUpperCase();
+// });
+// console.log(array)
+
+// тоже самое но проще
+//********************
+console.log(array.map(function(e){return e.toUpperCase()}))
+//*******************
+
+var filtered = array.filter(function(e){
+    return e.indexOf('o') === -1; // фильтр на содержание буквы О
+});
+console.log(filtered);
+
+console.log(array.every(function(e){ // проверка каждого елемента на длинну больше 4
+    e.length > 4; // true
+}));
+
+console.log(array.some(function(e){ // проверка на содержание буквы s
+    return e.indexOf('s') !== -1;
+}));
+
+var numbers = [1, 2, 3, 4, 5, 3, 6];
+
+var reduced = numbers.reduce(function(a, b){// можно перемножить все числа массива
+    return a * (b % 3 === 0 ? b : 1); //множим числа кратные 3
+}) 
+console.log(reduced)
+
+var reducedSecond = numbers.reduceRight(function(a, b){ //reduceRight проходит массив справа на лево
+    return a * (b % 3 === 0 ? b : 1); 
+}) 
+console.log(reduced)
+
+console.log(numbers.indexOf(3))// позиция элемента в массиве
+console.log(numbers.lastIndexOf(3))
+console.log(numbers.lastIndexOf(10))// если элемента нет в массиве то вернет -1
